@@ -77,7 +77,7 @@ When the app starts, the **Splash Screen** is displayed briefly. It transitions 
 
 ### **3. Main Screen**  
 - Displays a list of prayer times for the day. ⏰  
-- Highlights the next prayer time and shows the remaining time. ⏳  
+- Highlights the current and next prayer time and shows the remaining time. ⏳  
 - Shows the user's location (city and country) and the current Gregorian/Hijri date. 🗓️
 
 ### **4. Settings Screen**  
@@ -96,7 +96,7 @@ The app follows the **MVVM (Model-View-ViewModel)** architecture for better sepa
 
 ### **Activities**
 1. **MainActivity.java**:  
-   Displays prayer times, next prayer info, and user location. Handles navigation via `BottomNavigationView`. 🧭
+   Displays prayer times,current and next prayer info, and user location. Handles navigation via `BottomNavigationView`. 🧭
 
 2. **SettingsActivity.java**:  
    Allows users to configure preferences like city, country, auto-location toggle, and calculation method. ⚙️
@@ -164,19 +164,15 @@ The app follows the **MVVM (Model-View-ViewModel)** architecture for better sepa
 
 ### **2. Setup Screen**  
 ![Setup Screen](readme_assets/setup_screen.jpg)  
-*Replace with your actual screenshot.*
 
 ### **3. Main Screen**  
 ![Main Screen](readme_assets/main_screen.jpg)  
-*Replace with your actual screenshot.*
 
 ### **4. Settings Screen**  
 ![Settings Screen](readme_assets/settings_screen.jpg)  
-*Replace with your actual screenshot.*
 
 ### **5. About Screen**  
 ![About Screen](readme_assets/about_screen.jpg)  
-*Replace with your actual screenshot.*
 
 ---
 
