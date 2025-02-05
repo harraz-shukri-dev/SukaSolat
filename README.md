@@ -205,12 +205,12 @@ implementation 'com.google.android.gms:play-services-location:21.0.1'
 ## **Contributors**  
 - **Muhammad Harraz Hilmi Bin Mohd Shukri** - Main Developer  
   Matric Number: B032410540  
-  Email: razdevonline@gmail.com
+  Email: razdevonline@gmail.com  
   Section/Group/Programme : S3/G2/BITS
 
 - **Ahmad Taufiq Andriono** - Second Developer  
   Matric Number: B032410965  
-  Email: b032410965@student.utem.edu.my
+  Email: b032410965@student.utem.edu.my  
   Section/Group/Programme : S1/G1/BITS
 ---
 
