@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00b8b8</color>
+    <color name="colorPrimaryDark">#00b8b8</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="md_theme_primary">#00b8b8</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_secondary">#625B71</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_background">#FFFBFE</color>
+    <color name="md_theme_surface">#FFF4F6</color>
+    <color name="md_theme_onSurface">#1C1B1F</color>
+
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#616161</color>
+    <!-- res/values/colors.xml -->
+
+    <!-- Other colors -->
+    <!-- Highlight Colors -->
+    <color name="next_highlight_color">#B2EBF2</color> <!-- Light Blue for next prayer time -->
+    <color name="current_highlight_color">#008A8A</color> <!-- Dark Cyan for current prayer time -->
+
+
+</resources>
