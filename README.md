@@ -160,7 +160,6 @@ The app follows the **MVVM (Model-View-ViewModel)** architecture for better sepa
 
 ### **1. Splash Screen**  
 ![Splash Screen](readme_assets/splash_screen.png)  
-*Replace with your actual screenshot.*
 
 ### **2. Setup Screen**  
 ![Setup Screen](readme_assets/setup_screen.png)  
