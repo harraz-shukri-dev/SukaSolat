@@ -9,6 +9,7 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -19,9 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
@@ -224,7 +227,48 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private String addMinutesToTime(String time, int minutesToAdd) {
+        try {
+            if (time == null || !time.matches("\\d{1,2}:\\d{2}")) {
+                return time; // Return the original time if invalid
+            }
+
+            // Parse the time string into LocalDateTime
+            LocalDate currentDate = LocalDate.now();
+            String[] parts = time.split(":");
+            int hours = Integer.parseInt(parts[0]);
+            int minutes = Integer.parseInt(parts[1]);
+
+            LocalDateTime dateTime = LocalDateTime.of(currentDate, LocalTime.of(hours, minutes));
+
+            // Add the specified minutes
+            LocalDateTime updatedDateTime = dateTime.plusMinutes(minutesToAdd);
+
+            // Format back to 24-hour time string
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm", Locale.getDefault());
+            return updatedDateTime.format(formatter);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return time; // Return the original time if an error occurs
+        }
+    }
+
     private void updateUIWithPrayerTimes(PrayerTime prayerTime) {
+
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPreferences", MODE_PRIVATE);
+        int methodId = sharedPreferences.getInt("calculation_method_id", 3); // Default to Muslim World League
+
+        // Adjust prayer times if the method ID is 17
+        if (methodId == 17) {
+            prayerTime.setImsak(addMinutesToTime(prayerTime.getImsak(), 10)); // +10 min for Imsak
+            prayerTime.setFajr(addMinutesToTime(prayerTime.getFajr(), 10));   // +10 min for Fajr
+            prayerTime.setSunrise(addMinutesToTime(prayerTime.getSunrise(), 1)); // +1 min for Sunrise
+            prayerTime.setDhuhr(addMinutesToTime(prayerTime.getDhuhr(), 3));  // +3 min for Dhuhr
+            prayerTime.setAsr(addMinutesToTime(prayerTime.getAsr(), 3));      // +3 min for Asr
+            prayerTime.setMaghrib(addMinutesToTime(prayerTime.getMaghrib(), 1)); // +1 min for Maghrib
+            prayerTime.setIsha(addMinutesToTime(prayerTime.getIsha(), 2));    // +2 min for Isha
+        }
+
         // Update Next Prayer Time
         String[] prayerNames = {"Imsak", "Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"};
         String[] prayerTimes = {prayerTime.getImsak(), prayerTime.getFajr(), prayerTime.getSunrise(), prayerTime.getDhuhr(), prayerTime.getAsr(), prayerTime.getMaghrib(), prayerTime.getIsha()};
@@ -264,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
         textViewNextPrayerName.setText(nextPrayerName + ", " + nextPrayerDateTime.toLocalTime());
         textViewNextPrayerTimeRemaining.setText(nextPrayerName + " in " + hours + " hours, " + minutes + " minutes");
         // Update User Location and Dates
-        SharedPreferences sharedPreferences = getSharedPreferences("UserPreferences", MODE_PRIVATE);
+        // SharedPreferences sharedPreferences = getSharedPreferences("UserPreferences", MODE_PRIVATE);
         String city = sharedPreferences.getString("city", "");
         String country = sharedPreferences.getString("country", "");
         textViewUserLocation.setText(city + ", " + country);
