@@ -16,7 +16,7 @@ This app is built using modern Android development practices, including the **MV
 - **Manual Input**: Allows users to enter their city and country manually. 🏙️  
 - **Customizable Calculation Methods**: Supports multiple prayer time calculation methods (e.g., Muslim World League, Umm Al-Qura, etc.). 📊  
 - **Gregorian and Hijri Dates**: Displays both Gregorian and Hijri dates on the main screen. 📅  
-- **Next Prayer Time Highlighting**: Highlights the next prayer time and shows the remaining time. ⏳  
+- **Current & Next Prayer Time Highlighting**: Highlights the current & next prayer time and shows the remaining time. ⏳  
 - **Background Task**: Uses `WorkManager` to fetch prayer times in the background. 🕒  
 - **Local Storage**: Stores prayer times locally using Room Database for offline access. 💾  
 - **User Preferences**: Saves user preferences (e.g., city, country, calculation method) using `SharedPreferences`. ⚙️
@@ -96,7 +96,7 @@ The app follows the **MVVM (Model-View-ViewModel)** architecture for better sepa
 
 ### **Activities**
 1. **MainActivity.java**:  
-   Displays prayer times,current and next prayer info, and user location. Handles navigation via `BottomNavigationView`. 🧭
+   Displays prayer times, current and next prayer info, and user location. Handles navigation via `BottomNavigationView`. 🧭
 
 2. **SettingsActivity.java**:  
    Allows users to configure preferences like city, country, auto-location toggle, and calculation method. ⚙️
@@ -159,20 +159,20 @@ The app follows the **MVVM (Model-View-ViewModel)** architecture for better sepa
 ## **Screenshots**
 
 ### **1. Splash Screen**  
-![Splash Screen](readme_assets/splash_screen.jpg)  
+![Splash Screen](readme_assets/splash_screen.png)  
 *Replace with your actual screenshot.*
 
 ### **2. Setup Screen**  
-![Setup Screen](readme_assets/setup_screen.jpg)  
+![Setup Screen](readme_assets/setup_screen.png)  
 
 ### **3. Main Screen**  
-![Main Screen](readme_assets/main_screen.jpg)  
+![Main Screen](readme_assets/main_screen.png)  
 
 ### **4. Settings Screen**  
-![Settings Screen](readme_assets/settings_screen.jpg)  
+![Settings Screen](readme_assets/settings_screen.png)  
 
 ### **5. About Screen**  
-![About Screen](readme_assets/about_screen.jpg)  
+![About Screen](readme_assets/about_screen.png)  
 
 ---
 
