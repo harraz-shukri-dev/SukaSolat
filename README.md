@@ -4,7 +4,7 @@
 ---
 
 ## **Overview**  
-SukaSolat is an Android application designed to provide accurate prayer times for Muslims based on their location or manually entered city/country. The app supports features like auto-location detection, customizable calculation methods, and displays both Gregorian and Hijri dates. It also highlights the next prayer time and provides a user-friendly interface for managing settings. 📍🕌
+SukaSolat is an Android application designed to provide accurate prayer times for Muslims based on their location or manually entered city/country. The app supports features like auto-location detection, customizable calculation methods, and displays both Gregorian and Hijri dates. It also highlights the current and next prayer time and provides a user-friendly interface for managing settings. 📍🕌
 
 This app is built using modern Android development practices, including the **MVVM architecture**, **Room Database** for local storage, **WorkManager** for background tasks, and **Retrofit** for API integration with the [Aladhan API](https://aladhan.com/prayer-times-api). 🔧📱
 
