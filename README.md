@@ -24,8 +24,7 @@ This app is built using modern Android development practices, including the **MV
 ---
 
 ## **Presentation Video Link**  
-[Watch the Presentation Video](https://www.youtube.com/watch?v=bNmOX6LNV7g)
-
+Link - https://www.youtube.com/watch?v=bNmOX6LNV7g
 
 ---
 
