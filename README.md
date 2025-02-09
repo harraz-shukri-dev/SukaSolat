@@ -23,6 +23,11 @@ This app is built using modern Android development practices, including the **MV
 
 ---
 
+## **Presentation Video Link**  
+Link - https://www.youtube.com/watch?v=bNmOX6LNV7g
+
+---
+
 ## **Installation**  
 
 ### **Prerequisites**  
