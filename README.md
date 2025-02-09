@@ -28,6 +28,13 @@ Link - https://www.youtube.com/watch?v=bNmOX6LNV7g
 
 ---
 
+## **Program Structure Chart**  
+
+### **Structure Chart**  
+![Structure Chart](readme_assets/structure-chart.png)  
+
+---
+
 ## **Installation**  
 
 ### **Prerequisites**  
